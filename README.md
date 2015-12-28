@@ -20,7 +20,19 @@ And then execute it by typing (in any directory):
 
 `geolocation <IP address>`
 
-## Example of output`
+## Output only selected infos
+
+Default output for this command line are ip,hostname,city,region,country,loc,org,postal ([example of output](#example-of-output)).
+
+You can select the informations you want to be printed by adding a sed filter:
+
+```
+./geolocation <IP address> | | sed -n '/ip/p;/loc/p'
+```
+
+It will output the IP you given and the Country.
+
+## Example of output
 _Personal infos were hidden._
 
 
